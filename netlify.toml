@@ -1,0 +1,45 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+# IMPORTANT: Netlify evaluates redirect rules top-to-bottom, and rules are
+# checked BEFORE static files in some cases — a bare "/*" catch-all below
+# would otherwise intercept /sitemap.xml and /robots.txt and serve index.html
+# instead of the real files (this is what caused "Sitemap invalid" in Google
+# Search Console). These explicit pass-through rules must come first so real
+# static files are served correctly.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+# Note: requests to /.netlify/functions/* are handled internally by Netlify
+# before any redirect rules are evaluated, so the SPA catch-all below never
+# interferes with the availability function.
+
+# SPA fallback — must stay LAST so it doesn't shadow the rules above.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Force correct MIME types. Without this, some browsers/crawlers can receive
+# /sitemap.xml with a text/html content type and render the XML tags as
+# invisible plain text instead of parsing it as XML.
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
