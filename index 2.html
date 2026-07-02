@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Western KY Camper Rentals | Premium Delivery Camper Rentals</title>
+    <meta name="description" content="Premium delivery-and-setup camper rentals serving Kentucky, Indiana, and Tennessee. Family-owned, fully equipped, delivered right to your site." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EFLQXH81T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6EFLQXH81T');
+      window.gtag = gtag;
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      ══════════════════════════════════════════════════════════════════
+      NETLIFY FORMS — hidden static forms, DO NOT REMOVE
+      ══════════════════════════════════════════════════════════════════
+      Netlify detects forms by scanning plain HTML at build time. Because
+      the real, visible forms in this app are rendered by React (JavaScript),
+      Netlify's build bot can't see them directly. These identical, hidden
+      copies exist purely so Netlify registers the form names and fields —
+      they are never shown to visitors and never submitted themselves.
+      The real React forms (name="quote-request" and name="contact") submit
+      the actual data; Netlify matches them to these registrations by name.
+
+      After your first deploy: go to your Netlify site dashboard → Forms →
+      select "quote-request" → Settings & usage → Add notification → Email
+      notification → enter emily.rust@westernkycamperrentals.com.
+      Repeat for the "contact" form. That's it — submissions land in your
+      inbox automatically from then on.
+    -->
+    <form name="quote-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="quote-request" />
+      <input name="bot-field" />
+      <input name="camperName" />
+      <input name="checkIn" />
+      <input name="checkOut" />
+      <input name="nights" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="campground" />
+      <input name="site" />
+      <input name="adults" />
+      <input name="children" />
+      <input name="age25" />
+      <input name="petsYesNo" />
+      <input name="petType" />
+      <input name="petCount" />
+      <input name="hookups" />
+      <input name="generator" />
+      <input name="heardAbout" />
+      <textarea name="comments"></textarea>
+    </form>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="camper" />
+      <input name="event" />
+      <input name="dates" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
