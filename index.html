@@ -8,6 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!--
+      ══════════════════════════════════════════════════════════════════
+      GOOGLE ANALYTICS 4 — global site tag, DO NOT REMOVE
+      ══════════════════════════════════════════════════════════════════
+      Loads on every page since this file is the single entry point for
+      the whole app. send_page_view is set to false here because this is
+      a client-side-routed single-page app (React state + pushState) —
+      App.jsx manually fires a page_view event on every route change
+      (including the first one) with the correct page_path/page_title,
+      so pages are never double-counted or missed.
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EFLQXH81T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6EFLQXH81T', { send_page_view: false });
+      window.gtag = gtag;
+    </script>
   </head>
   <body>
     <div id="root"></div>
