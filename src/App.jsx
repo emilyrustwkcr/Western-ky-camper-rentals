@@ -1126,7 +1126,7 @@ const REVIEWS = [
     tag: "Jellystone Park Mammoth Cave",
     verified: true,
     wide: true,
-    photo: "/images/misc/review-photo.jpg",
+    photo: "/images/homepage/review-photo.jpg",
   },
   {
     quote: "This is our second time using Western KY Camper Rentals. It was a great experience just like the first time. They brought it to the campground, set it up, and explained everything we needed to know. The camper has everything you need! Super easy to work with and a clean camper! Highly recommend!",
